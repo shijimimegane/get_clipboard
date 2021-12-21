@@ -10,7 +10,7 @@ st.dataframe(df)
 
 copy_button = Button(label="Copy DF")
 copy_button.js_on_event("button_click", CustomJS(args=dict(df=df.to_csv(sep='\t')), code="""
-    navigator.clipboard.writeText(df);
+    navigator.clipboard.writeText("xyz");
     """))
 
 no_event = streamlit_bokeh_events(
